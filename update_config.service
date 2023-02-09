@@ -1,0 +1,13 @@
+[Unit]
+Description=Update config Script 
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+RemainAfterExit=yes
+ExecStart=/bin/update_config_start.sh
+ExecStop=/bin/update_config_stop.sh
+
+[Install]
+WantedBy=multi-user.target
