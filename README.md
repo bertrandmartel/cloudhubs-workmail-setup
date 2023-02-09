@@ -23,5 +23,35 @@ cp update_config.sh /bin/
 cp update_config.service /etc/systemd/system/update_config.service
 chmod 0644 /etc/systemd/system/update_config.service
 
+systemctl start update_config
 systemctl enable update_config
+```
+
+check status
+
+```bash
+systemctl status update_config
+```
+
+check logs
+
+```bash
+tail -f /var/log/update_config.log
+```
+
+Sample logs:
+
+```
+09/02/2023 17:53:15 - config is up to date
+09/02/2023 17:53:45 - running config update check
+09/02/2023 17:53:45 - config is up to date
+09/02/2023 17:54:15 - running config update check
+09/02/2023 17:54:15 - config is up to date
+09/02/2023 17:54:45 - running config update check
+09/02/2023 17:54:45 - config is up to date
+09/02/2023 17:55:15 - running config update check
+09/02/2023 17:55:15 - config was updated  <=========
+09/02/2023 17:55:15 - bio was restarted   <=========
+09/02/2023 17:55:54 - running config update check
+09/02/2023 17:55:54 - config is up to date
 ```
