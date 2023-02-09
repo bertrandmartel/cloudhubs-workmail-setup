@@ -55,3 +55,13 @@ Sample logs:
 09/02/2023 17:55:54 - running config update check
 09/02/2023 17:55:54 - config is up to date
 ```
+
+Other commands to debug:
+
+```bash
+# check bio
+systemctl status bio
+
+# check bio logs
+journalctl -f
+```
