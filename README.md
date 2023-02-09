@@ -1,4 +1,4 @@
-# Workmail SMTP config for Mozilla Cloudhubs 
+# AWS Workmail SMTP config for Mozilla Cloudhubs 
 
 The following parameters need to be set in the [reticulum](https://github.com/mozilla/reticulum) configuration located in `/hab/pkgs/mozillareality/reticulum/xxxxx/xxxxxx/config/config.toml` :
 
