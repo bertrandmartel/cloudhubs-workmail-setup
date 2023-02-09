@@ -18,11 +18,8 @@ The following will setup a service that will check if the config is up to date &
 git clone https://github.com/bertrandmartel/cloudhubs-workmail-setup.git
 cd cloudhubs-workmail-setup
 cp update_config_start.sh /bin/
-chmod 0755 /bin/update_config_start.sh
 cp update_config_stop.sh /bin/
-chmod 0755 /bin/update_config_stop.sh
 cp update_config.sh /bin/
-chmod 0755 /bin/update_config.sh
 cp update_config.service /etc/systemd/system/update_config.service
 chmod 0644 /etc/systemd/system/update_config.service
 
