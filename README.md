@@ -1,6 +1,6 @@
-# Workmail SMTP config for Mozilla cloudhubs 
+# Workmail SMTP config for Mozilla Cloudhubs 
 
-The following parameters needs to be set in the reticulum configuration located in `/hab/pkgs/mozillareality/reticulum/xxxxx/xxxxxx/config/config.toml` :
+The following parameters need to be set in the [reticulum](https://github.com/mozilla/reticulum) configuration located in `/hab/pkgs/mozillareality/reticulum/xxxxx/xxxxxx/config/config.toml` :
 
 ```
 [ret."Elixir.Ret.Mailer"]
@@ -15,6 +15,8 @@ password = {{ toToml cfg.email.password }}
 The following will setup a service that will check if the config is up to date & update the config accordingly:
 
 ```bash
+git clone https://github.com/bertrandmartel/cloudhubs-workmail-setup.git
+cd cloudhubs-workmail-setup
 cp update_config_start.sh /bin/
 chmod 0755 /bin/update_config_start.sh
 cp update_config_stop.sh /bin/
